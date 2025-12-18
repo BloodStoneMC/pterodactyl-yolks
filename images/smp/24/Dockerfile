@@ -1,4 +1,4 @@
-FROM ghcr.io/mcjars/pterodactyl-yolks:java_24
+FROM g--platform=$TARGETOS/$TARGETARCH ghcr.io/mcjars/pterodactyl-yolks:java_24
 
 USER root
 
