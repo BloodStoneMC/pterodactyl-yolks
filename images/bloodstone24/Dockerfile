@@ -11,12 +11,11 @@ RUN set -eux; \
         jq \
         bash \
         python3 \
-        python3-pip \
         ca-certificates \
         curl \
         gnupg; \
-    pip3 install --no-cache-dir --upgrade pip; \
-    pip3 install --no-cache-dir yt-dlp; \
+    curl -fsSL -o /usr/local/bin/yt-dlp "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp"; \
+    chmod +x /usr/local/bin/yt-dlp; \
     rm -rf /var/lib/apt/lists/*; \
 
 USER container
