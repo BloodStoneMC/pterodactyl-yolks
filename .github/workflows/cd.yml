@@ -7,7 +7,7 @@ on:
 
 jobs:
   push:
-    name: Build & push: ${{ matrix.image }}${{ matrix.tag }} ({{ matrix.arch }})
+    name: Build and push
     runs-on: ubuntu-latest
     permissions:
       contents: read
