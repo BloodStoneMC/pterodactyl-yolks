@@ -45,7 +45,7 @@ jobs:
         with:
           context: ./images
           file: ./images/${{ matrix.image }}/${{ matrix.tag }}/Dockerfile
-          platforms: ${{ 'linux/' + matrix.arch }}
+          platforms: ${{ format('linux/{0}', matrix.arch) }}
           push: true
           tags: |
             ghcr.io/bloodstonemc/pterodactyl-yolks:${{ matrix.image }}${{ matrix.tag }}-${{ matrix.arch }}
