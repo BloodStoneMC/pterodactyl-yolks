@@ -1,5 +1,7 @@
 FROM ghcr.io/mcjars/pterodactyl-yolks:java_24
 
+USER root
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -eux; \
@@ -16,3 +18,5 @@ RUN set -eux; \
     pip3 install --no-cache-dir --upgrade pip; \
     pip3 install --no-cache-dir yt-dlp; \
     rm -rf /var/lib/apt/lists/*; \
+
+USER container
