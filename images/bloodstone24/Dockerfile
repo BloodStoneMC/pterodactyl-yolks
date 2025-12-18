@@ -16,7 +16,6 @@ RUN set -eux; \
         gnupg; \
     curl -fsSL -o /usr/local/bin/yt-dlp "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp"; \
     chmod +x /usr/local/bin/yt-dlp; \
-    rm -rf /var/lib/apt/lists/*; \
+    rm -rf /var/lib/apt/lists/*;
 
 USER container
-
