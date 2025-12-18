@@ -38,4 +38,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/BloodStoneMC/pterodactyl-yolks:bloodstone${{ matrix.tag }}
+            ghcr.io/bloodstonemc/pterodactyl-yolks:bloodstone${{ matrix.tag }}
